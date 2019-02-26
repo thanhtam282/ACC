@@ -1,0 +1,49 @@
+.dh-home-1
+	.swiper-container
+		// height: 100vh
+		.swiper-wrapper
+			.swiper-slide
+				position: relative
+				img
+					// height: 100%
+					// width: 100%
+					// object-fit: cover
+					max-width: 100%
+				.container
+					overflow: hidden
+					top: 50%
+					left: 50%
+					transform: translate(-50% , -50%)
+					display: flex
+					justify-content: center
+					position: absolute
+					h1 
+						margin-right: auto
+						// display: none
+						color: color-get($mau,trang)
+						transition-delay: .25s
+						transition: 1s all ease-in-out
+						font-weight: 600
+						text-transform: uppercase
+						transform: translateX(-100%)
+						font-size: r(36px)
+						max-width: 490px
+						@media  (max-width: 400px)
+							font-size: 1rem
+						@media  (max-width: 992px)
+							max-width: none
+							font-size: 1.5rem
+						span
+							display: block
+							&:before
+								transition-delay: 1.25s
+								transition: 1s all ease-in-out
+								transform: rotate(270deg)
+				&.swiper-slide-active
+					.container
+						h1
+							transform: translateX(0%)
+
+							span
+								&:before
+									transform: rotate(-90deg)

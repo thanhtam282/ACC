@@ -1,0 +1,79 @@
+.dh-home-3
+	background-repeat: no-repeat
+	background-position: center
+	padding: r(36px) 0
+	@media (max-width: 992px)
+		padding: r(30px) 0
+	p
+		color: color-get($mau,trang)
+		@media (max-width: 992px)
+			font-size: r(14px)
+			padding-top: .5rem
+	.swiper-button-prev
+		width: 40px
+		height: 40px
+		background-image: none
+		z-index: 2
+		top: 50%
+		text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.4)
+		color: #ebebeb
+		left: 1rem
+		// transform: translateY(-50%)
+		+f-center
+
+
+
+		&.swiper-button-disabled
+			pointer-events: initial
+		span
+			font-size: r(50px)
+		transition: .3s all ease-in-out
+		&:hover, &:active, &:focus
+			outline: none
+	.swiper-button-next
+		width: 40px
+		text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.4)
+
+		height: 40px
+		+f-center
+		background-image: none
+		z-index: 2
+		top: 50%
+		// transform: translateY(-50%)
+		color: #ebebeb
+		right: 1rem
+		&.swiper-button-disabled
+			pointer-events: initial
+
+		span
+			font-size: r(50px)
+		transition: .3s all ease-in-out
+		&:hover, &:active, &:focus
+			outline: none
+	.gallery
+		padding-top: 1.5rem
+	.swiper-container
+		.swiper-wrapper
+			.swiper-slide
+				img
+					width: 100%
+					object-fit: cover
+					@media (max-width: 992px)
+						height: 250px
+				h3
+					z-index: 2
+					position: absolute
+					bottom: 2rem
+					left: 2rem
+					font-size: r(24px)
+					color: color-get($mau,trang)
+					text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25)
+					span
+						display: block
+					@media (max-width: 992px)
+						bottom: .5rem
+						left: .5rem
+						font-size: 1rem
+						span
+							font-size: 1.5rem
+

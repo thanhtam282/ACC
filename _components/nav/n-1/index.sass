@@ -1,0 +1,130 @@
+.dh-nav-1, .dh-nav-2
+	@media (min-width: 992px)
+		background: color-get($mau,main)
+	.nav-wrap
+		position: relative
+		.nav-toggle
+			padding: r(10px) r(20px)
+			background: color-get($mau,main)
+			color: #ffffff
+			display: inline-block
+			width: 100%
+			text-decoration: none
+			font-size: 1.2rem
+			box-shadow: 0px -1px 0px 0px  rgba(255,255,255,.1) inset
+			position: relative
+			&:before
+				content: '\e874'
+				font-family: 'Linearicons-Free'
+				font-size: 1rem
+				position: absolute
+				top: 0
+				right: r(20px)
+				line-height: r(45px)
+			@media (min-width: 992px)
+				display: none
+		nav
+			@media (max-width: 991.98px)
+				position: absolute
+				left: 0
+				top: 100%
+				z-index: 10
+				width: 100%
+				max-height: 0
+				overflow: hidden
+				transition: .2s all ease-in-out
+			ul
+				list-style-type: none
+				padding-left: 0
+				margin-bottom: 0
+				display: flex
+				justify-content: center
+				flex-direction: column
+				@media (max-width: 991.98px)
+					background: color-get($mau,main)
+				@media (min-width: 992px)
+					justify-content: flex-start
+					flex-direction: row
+				li
+					@media (max-width: 991.98px)
+
+						opacity: 0
+						transform: translate3d(0, 36px, 0)
+					a
+						display: block
+						padding: r(10px) r(20px)
+						font-size: r(15px)
+						font-weight: 400
+						text-decoration: none
+						// text-transform: uppercase
+						color: #ffffff
+						position: relative
+						border-right: 2px solid color-get($mau,main)
+						border-left: 2px solid color-get($mau,main)
+						&:before
+							content: ''
+							+wh(10px)
+							background: color-get($mau,extra)
+							position: absolute
+							bottom: -5px
+							left: 50%
+							transform: translateX(-50%) rotate(45deg)
+
+							width: 0
+							transition-delay: .2s
+							transition: .1s all ease-in-out
+						&:focus , &:active , &.active
+							background: color-get($mau, main)
+							&:before
+								width: 10px
+								@media (max-width: 992px)
+									width: 100%
+									transition-delay: 0s
+									transition: .0s all ease-in-out
+									transform: rotate(0)
+									left: 0
+									bottom: 0
+									height: 2px
+						@media (max-width: 991.99px)
+							background: color-get($mau, main)
+						@media (min-width: 992px)
+
+							transition: .3s all ease-in-out
+							&:hover , &.active
+								color: #ffffff
+								background: color-get($mau,extra)
+								border-right: 2px solid color-get($mau,trang)
+								border-left: 2px solid color-get($mau,trang)
+								&.active
+									&:before
+										width: 10px
+			&.active
+				max-height: r(250px)
+				ul
+					li
+						opacity: 1
+						transform: translate3d(0,0,0)
+						transition: .2s all ease-in-out
+						&:nth-child(1)
+							transition-delay: 0.15s
+						&:nth-child(2)
+							transition-delay: 0.2s
+						&:nth-child(3)
+							transition-delay: 0.25s
+						&:nth-child(4)
+							transition-delay: 0.3s
+						&:nth-child(5)
+							transition-delay: 0.35s
+						&:nth-child(6)
+							transition-delay: 0.4s
+						&:nth-child(7)
+							transition-delay: 0.45s
+						&:nth-child(8)
+							transition-delay: 0.5s
+	&.active
+		position: fixed
+		left: 0
+		width: 100%
+		z-index: 70
+		@media (min-width: 992px)
+			box-shadow: 0px 1px 6px 0px rgba(32,33,36,0.28) 

@@ -1,0 +1,78 @@
+
+
+// Colors
+@function color-get($bn-colors, $co)
+	$mapcolor: map-get($bn-colors, "#{$co}")
+	@if ($mapcolor)
+		@return $mapcolor
+	@else
+		@return white
+
+@function color-rgba($co: #fff, $o:1)
+	@if ($co)
+		@return rgba(red($co),green($co),blue($co),$o)
+	@else
+		@return white
+
+@function r($size)
+	@return ($size/16px)*1rem
+
+@function rem($size)
+	@return ($size/16px)*1rem
+
+=line($line)
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-line-clamp: $line
+	-webkit-box-orient: vertical
+
+=mtrl($content)
+	display: inline-block
+	font-family: "Material Design Icons"
+	font-size: inherit
+	text-rendering: auto
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	content: $content
+
+=larc($content)
+	content: $content
+	font-family: 'Linearicons-Free'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+=faws($content,$font, $fw)
+	font-family: $font
+	content: $content
+	font-weight: $fw
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	display: inline-block
+	font-style: normal
+	font-variant: normal
+	text-rendering: auto
+	line-height: 1
+
+=tr($time)
+	transition: all $time+s ease-out
+
+=f-center
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+
+=wh($value)
+	width: $value
+	height: $value
+
+
+

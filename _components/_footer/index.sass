@@ -1,0 +1,99 @@
+footer
+	overflow: hidden
+	.wrapper
+		padding: r(46px) 0
+		@media (max-width: 992px)
+			padding: r(30px) 0
+	background: #f1f5f6
+	.link-wrapper
+		@media (max-width: 992px)
+			margin-top: 1rem
+		h4
+			font-size: r(18px)
+			color: #424242
+			font-weight: 500
+			padding-bottom: .7rem
+			@media (min-width: 992px)
+				padding-bottom: r(26px)
+		.nav
+			.nav-item
+				.nav-link
+					line-height: 2
+					font-size: r(14px)
+					color: color-get($mau,text-6)
+					position: relative
+					padding-left: .5rem
+					&:after
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						left: 0
+						display: block
+						content: '-'
+	.coppy-right
+		padding: 20px 15px
+		background: #424242
+		position: relative
+		z-index: 1
+		+f-center
+		flex-direction: column
+		@media (min-width: 577px)
+			flex-direction: row
+			justify-content: space-between
+		&:after
+			position: absolute
+			top: 0
+			left: -50%
+			display: block
+			width: 1000%
+			height: 100%
+			content: ''
+			z-index: -1
+
+			background: #424242
+		.wrapper-info
+			.nav
+				margin: 0 -8px
+				display: flex
+				.nav-item
+					padding: 0 8px
+					+ .nav-item
+						position: relative
+						&:after
+							position: absolute
+							top: 4px
+							left: 0
+							display: block
+							width: 1px
+							height: 80%
+							content: ''
+							background: color-get($mau,text-9)
+					.nav-link
+						font-size: r(13px)
+						color: color-get($mau,text-9)
+			p
+				padding-top: 3px
+				color: color-get($mau,text-9)
+				font-size: r(13px)
+				@media (max-width: 576px)
+					margin-top: 1rem
+
+		.social
+			display: flex
+			@media (max-width: 576px)
+				margin-top: 1rem
+			.facebook, .youtube
+				margin-left: 8px
+				&:hover
+					text-decoration: none
+				span
+					+f-center
+					background: #235695
+					+wh(28px)
+					border-radius: 50%
+					color: color-get($mau,trang)
+					font-size: r(18px)
+			.youtube
+
+				span
+					background: #e3352c

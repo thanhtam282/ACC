@@ -1,0 +1,49 @@
+.dh-home-4
+	padding: r(30px) 0
+	@media (min-width: 992px)
+		padding: r(40px) 0
+	h2
+		color: color-get($mau,text-3)
+		padding-bottom: 1.5rem
+	figure
+		position: relative
+		.box-zoom
+			img
+				object-fit: cover
+		figcaption
+			position: absolute
+			bottom: 0
+			padding: 1rem
+			time
+				color: color-get($mau,trang)
+				background: color-get($mau, extra)
+				padding: 2px 5px
+				font-size: r(12px)
+				
+			h3
+				margin-top: .5rem
+				color: color-get($mau,trang)
+	.main
+		figure
+			figcaption
+				h3
+					font-weight: 600
+	.sub
+		@media (max-width: 992px)
+			margin-top: 10px
+		@media (max-width: 480px)
+			margin-top: 0 !important
+			figure
+				margin-top: 10px
+	.col-sm-6
+		&:nth-child(3), &:nth-child(4)
+			@media (min-width: 481px)
+				margin-top: 10px
+		@media (min-width: 480px)
+			flex: 0 0 50%
+			max-width: 50%
+	.box-item
+		@media (min-width: 992px)
+			&:hover
+				h3
+					text-decoration: underline
