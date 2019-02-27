@@ -3,7 +3,8 @@
 		"_plugins/grid.css",
 		"_plugins/font.css",
 		"bower_components/swiper/dist/css/swiper.min.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/lightgallery/dist/css/lightgallery.min.css",
+		"bower_components/lightgallery/dist/css/lg-transitions.min.css",
 		"bower_components/aos/dist/aos.css"
 	],
 	"js": [
@@ -11,12 +12,13 @@
 		"_plugins/btnripple.js",
 		"_plugins/ofi.min.js",
 		"bower_components/swiper/dist/js/swiper.js",
-		"bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"bower_components/lightgallery/dist/js/lightgallery-all.js",
 		"bower_components/aos/dist/aos.js"
 	],
 	"font": [
 		"bower_components/mdi/fonts/*",
 		"bower_components/font-awesome/webfonts/*",
-		"bower_components/linearicons/dist/web-font/fonts/*"
+		"bower_components/linearicons/dist/web-font/fonts/*",
+		"bower_components/lightgallery/dist/fonts/*"
 	]
 }
