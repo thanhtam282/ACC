@@ -99,11 +99,13 @@
 							position: relative
 							&:after
 								position: absolute
-								top: -5px
+								top: -1px
 								display: block
-								width: 100%
+								width: 0%
+								left: 50%
 								height: 2px
 								opacity: 0
+								transform: translateX(-50%)
 								content: ''
 								transition: .3s all ease-in-out
 								background: color-get($mau, trang)
@@ -114,12 +116,14 @@
 								@media (min-width: 992px)
 									color: color-get($mau,text-3)
 									&:after
-										top: -1px
+										width: 100%
 										opacity: 1
 							&.active
-								&:after
-									top: 111%
-									opacity: 1
+								@media (max-width: 992px)
+									&:after
+										width: 100%
+										top: 111%
+										opacity: 1
 	@media (max-width: 992px)
 		height: 50px
 		.wrapper
@@ -140,12 +144,34 @@
 					// 	a
 					// 		&.active
 					.toggle-menu
-						display: block
-						font-size: r(25px)
+						+f-center
+						margin-left: 8px
+						flex-direction: column
+						span
+							display: block
+							width: 2rem
+							background: color-get($mau, text-3)
+							height: 3px
+							transition: .3s all ease-in-out
+							&:first-child
+								width: 1.4rem
+								margin-left: auto
+							+ span
+								margin-top: 5px
+						&.active
+							span
+								margin: 0
+								&:nth-child(2)
+									display: none
+								&:first-child
+									width: 2rem
+									transform: rotate(-45deg) !important
+								&:nth-child(odd)
+									transform: rotate(45deg)
 				.bottom-nav
 					position: fixed
 					top: 50px
-					right: -100%
+					left: -100%
 					width: 300px
 					height: 100%
 					background: color-get($mau, main)
@@ -155,7 +181,7 @@
 						margin-left: initial
 						width: 100%
 						.nav-item
-							transform: translateX(100%)
+							transform: translateX(-100%)
 							transition: .7s all ease-in-out
 							&:first-child
 								.nav-link
@@ -165,7 +191,7 @@
 							.nav-link
 								color: color-get($mau,trang)
 					&.active
-						right: 0
+						left: 0
 						.nav
 							.nav-item
 								transform: translateX(0%)
@@ -198,7 +224,10 @@
 							box-shadow: 1px 1px 20px 0px #00000047
 							position: absolute
 							height: 28px
-							right: 2px
+							left: 11px
 							width: 280px
 							top: 61px
 							z-index: 1
+				.bottom-nav
+					.nav
+						padding: 0 1rem
