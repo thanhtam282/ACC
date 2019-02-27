@@ -1,0 +1,75 @@
+.acc-service-1
+	@media (min-width: 992px)
+		padding: r(70px) 0
+	.content
+		span
+			display: block
+			color: color-get($mau,main)
+			font-size: r(20px)
+			font-weight: 200
+		p
+			color: color-get($mau,text-6)
+			padding-top: 1.5rem
+	a
+		figure
+			overflow: hidden
+			position: relative
+			margin-top: 30px
+			.box-zoom
+				&:after
+					position: absolute
+					top: 0
+					display: block
+					width: 100%
+					height: 100%
+					content: ''
+					transition: .3s all ease-in-out
+					opacity: .2
+					background: color-get($mau, den)
+
+			figcaption
+				position: absolute
+				width: 100%
+				bottom: 0
+				color: color-get($mau,trang)
+				text-align: center
+				transition: .3s all ease-in-out
+				transform: translateY(0px)
+				padding: 1.5rem 30px
+				@media (max-width: 500px)
+					padding: 1rem
+				h3
+					font-size: r(18px)
+					font-weight: 500
+					position: relative
+					padding-bottom: .5rem
+					&:after
+						position: absolute
+						bottom: 0
+						display: block
+						left: 50%
+						transform: translateX(-50%)
+						width: 40px
+						height: 2px
+						background: color-get($mau, extra)
+						content: ''
+						opacity: 0
+				p
+					padding-top: 1.5rem
+					opacity: 0
+					display: none
+					transition: .3s all ease-in-out
+		&:hover
+			figure
+				.box-zoom
+					&:after
+						opacity: .8
+						background: color-get($mau, main)
+				figcaption
+					transform: translateY(0px)
+					h3
+						&:after
+							opacity: 1
+					p
+						opacity: 1
+						display: block

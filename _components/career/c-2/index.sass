@@ -1,0 +1,109 @@
+.acc-career-2
+	padding: 30px 0
+	h2
+		padding-bottom: r(30px)
+		padding-top: .5rem
+
+	.position-wrapper
+		&:last-child
+			.title-wrapper
+				border-bottom: 1px solid #e1e1e1
+		.title-wrapper
+			padding: 30px 40px
+			border-top: 1px solid #e1e1e1
+			h3
+				+f-center
+				color: color-get($mau,text-3)
+				span
+					padding-right: 25px
+					color: color-get($mau,text-9)
+					font-size: r(30px)
+				time
+					margin-left: auto
+					color: color-get($mau,text-6)
+			@media (max-width: 992px)
+				padding: 1rem
+				h3
+					font-size: 1rem
+					span
+						font-size: 1.2rem
+					time
+						font-size: 14px
+
+			&.active
+				background: #f1f5f6
+				border: 0
+				h3
+					color: color-get($mau,main)
+		.detail-wrapper
+			padding: 0 90px
+			@media (max-width: 992px)
+				padding: 0 1rem
+			h4 
+				margin-top: 2rem
+				font-size: r(18px)
+				font-weight: 500
+			h5
+				font-size: 1rem
+				margin-top: 1rem
+			ul
+				margin-top: 1rem
+				li
+					color: color-get($mau,text-6)
+					top: 50%
+					padding: .5rem 1rem
+					display: block
+					position: relative
+
+					&:after
+						position: absolute
+						left: 0
+						top: 50%
+						background: color-get($mau, text-9)
+						transform: translateY(-50%)
+						display: block
+						width: 7px
+						border-radius: 50%
+						height: 7px
+						content: ''
+			p
+				color: color-get($mau,text-6)
+				line-height: 30px
+				span
+					color: color-get($mau,main)
+					text-decoration: underline
+					&.web
+						color: color-get($mau,extra)
+			.wrapper-btn
+				margin-bottom: 60px
+
+				margin-top: 2rem
+				display: flex
+				.btn-apply, .btn-appl-form
+					+f-center
+					color: color-get($mau,extra)
+					border: 1px solid color-get($mau,extra)
+					height: 44px
+					min-width: 220px
+					border-radius: 22px
+					position: relative
+					transition: .3s all ease-in-out
+					&:hover
+						background: color-get($mau, extra)
+						text-decoration: none
+						color: color-get($mau,trang)
+					&:after
+						+mtrl('\f142')
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 1.4rem
+						font-size: 1.4rem
+						display: block
+
+				.btn-appl-form
+					margin-left: 20px
+					color: color-get($mau,text-6)
+					border: 1px solid color-get($mau,text-6)
+					&:hover
+						background: color-get($mau, text-6)

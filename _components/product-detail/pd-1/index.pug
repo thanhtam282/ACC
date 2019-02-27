@@ -3,3 +3,45 @@ section.acc-product-detail
 		.row
 			.col-lg-3.col-md-4.col-12
 				include ../../../_components/nav/n-1/index
+			.col-lg-9.col-md-8.col-12
+				h1.h-title Dairy Powders
+				.row
+					.col-sm-6
+						.description
+							ul
+								li
+									span Full cream milk powder
+								li
+									span Instant full cream milk powder
+								li
+									span Skimmed milk powder
+								li
+									span Instant skimmed milk powder
+								li
+									span Whey protein concentrate
+								li
+									span Anhyrous millk fat (AMF)
+	
+					.col-sm-6
+						.description
+							ul
+								li
+									span Sweet whey powder
+								li
+									span Milk permeate
+								li
+									span Colostrum powder
+								li
+									span Non dairy creamer
+								li
+									span Cocoa powder
+								li
+									span Ceareal flakes
+					.col
+						.swiper-container
+							.swiper-pagination
+							.swiper-wrapper
+								- for ( var x = 1; x < 8; x++)
+									.swiper-slide
+										img(src="./img/product_detail/pd_1.jpg", alt="")
+
