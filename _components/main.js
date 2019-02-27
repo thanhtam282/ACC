@@ -8,16 +8,45 @@ $(document).ready(() => {
 	AOS.init();
 	breadcrum.breadcrumInit();
 	// Load Ajax
-
+	slider.sliderInit()
 });
 
-function addClassByLocation() {
-	let i = window.location.pathname
-	if (i.search('linh-vuc-hoat-dong') > 0) {
-		$('.dh-header .header-nav li:nth-child(3) a').addClass('active')
-	} else if (i.search('truyen-thong') > 0) {
-		$('.dh-header .header-nav li:nth-child(5) a').addClass('active')
-	} else if (i.search('co-hoi-nghe-nghiep') > 0) {
-		$('.dh-header .header-nav li:nth-child(6) a').addClass('active')
+var slider = {
+	product_slider_1: () => {
+		let home_slider_2 = new Swiper('.acc-product-detail .swiper-container', {
+			slidesPerView: 1,
+			autoHeight: false,
+			loop: true,
+			// autoHeight: false,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		})
+	},
+	service_slider_1: () => {
+		let home_slider_2 = new Swiper('.acc-service-detail-1 .swiper-container', {
+			slidesPerView: 1,
+			autoHeight: false,
+			loop: true,
+			// autoHeight: false,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		})
+	},
+	sliderInit: () => {
+		slider.product_slider_1();
+		slider.service_slider_1();
+
 	}
 }
