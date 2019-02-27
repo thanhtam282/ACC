@@ -6,30 +6,8 @@ $(document).ready(() => {
 	objectFitImages();
 	// Lĩnh vực
 	AOS.init();
-
-
+	breadcrum.breadcrumInit();
 	// Load Ajax
-	$('body').on('click', '.load-more a', function (e) {
-		e.preventDefault()
-		let pageurl = $('.load-more a').attr('href');
-		$.ajax({
-			url: pageurl,
-			data: {
-				isajax: true
-			},
-			type: 'post',
-			success: function (data) {
-				$('.ajaxwrapper').append($(data).find('.ajaxwrapper').html());
-				$('.ajaxPagerLinkWrapper').html($(data).find('.ajaxPagerLinkWrapper').html());
-			},
-		})
-	})
-});
-
-$(window).scroll(function () {
-	if ($('.dh-nav-2').length) {
-		slider.checkMenuScroll();
-	}
 
 });
 

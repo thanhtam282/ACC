@@ -1,9 +1,24 @@
 .acc-nav-1
 	background: #f1f5f6
-	padding: 2rem 1rem
-	// .nav-wrap
-	// 	a.nav-toggle
-	// 	nav
-	// 		ul
-	// 			li
-	// 				a
+	padding:  1rem
+
+	.nav-wrap
+		margin-top: 1.2rem
+		a.nav-toggle
+			display: block
+			position: relative
+			color: color-get($mau,text-6)
+			padding-bottom: .5rem
+			&:before
+				position: absolute
+				right: 0
+				+faws('\f0d7', $faf, 900)
+
+
+		nav
+			ul
+				padding-left: 1rem
+				li
+					padding: .25rem 0
+					a
+						color: color-get($mau,text-6)
