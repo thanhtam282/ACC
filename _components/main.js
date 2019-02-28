@@ -56,6 +56,23 @@ $(document).ready(() => {
 		}
 	});
 
+	$(window).on('scroll', function () {
+		var navHeight = $('.acc-header').innerHeight() + $('.acc-banner-1').innerHeight() - $('.acc-about-nav').innerHeight() - 30;
+		if ($(window).scrollTop() > navHeight) {
+			$('.acc-about-nav').addClass('fixed');
+			$('.acc-about-nav').css({
+				'top': $('.acc-header').innerHeight()
+			})
+		} else {
+			$('.acc-about-nav').removeClass('fixed');
+			$('.acc-about-nav').css({
+				'top': 0
+			})
+		}
+	});
+
+
+	scrollNav()
 	objectFitImages();
 	// Lĩnh vực
 	breadcrum.breadcrumInit();
@@ -149,6 +166,13 @@ var slider = {
 			},
 
 
+			sliderInit: () => {
+				slider.product_slider_1();
+				slider.service_slider_1();
+				slider.relationship_slider_1();
+				slider.home_slider_1();
+
+			}
 		})
 	},
 	sliderInit: () => {
@@ -158,4 +182,21 @@ var slider = {
 		slider.home_slider_1();
 
 	}
+}
+
+function scrollNav() {
+	$('.acc-about-nav a').click(function () {
+		//Toggle Class
+		let headerHeight = $('.acc-header').innerHeight()
+		$(".active").removeClass("active");
+		$(this).closest('li').addClass("active");
+		var theClass = $(this).attr("class");
+		$('.' + theClass).parent('li').addClass('active');
+		//Animate
+		$('html, body').stop().animate({
+			scrollTop: $($(this).attr('data-link')).offset().top - headerHeight - $('.acc-about-nav').innerHeight()
+		}, 1500);
+		return false;
+	});
+	$('.scrollTop a').scrollTop();
 }
