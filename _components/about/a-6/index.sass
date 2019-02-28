@@ -1,0 +1,72 @@
+.acc-about-6
+	padding: 60px 0
+	background-image: url('.././img/about/about_bg_2.jpg')
+	background-position: center center
+	background-size: cover
+	min-height: 640px
+	h2
+		font-size: 36px
+		color: #ffffff
+		font-weight: normal
+		margin-bottom: 40px
+		text-align: center
+	.tab-list
+		text-align: center
+		width: 100%
+		margin-bottom: 40px
+		ul
+			display: flex
+			width: 100%
+			justify-content: center
+			li
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 11px 22px
+				border-radius: 25px
+				background: #09478c
+				color: #678fbc
+				cursor: pointer
+				+tr(0.3)
+				+ li
+					margin-left: 10px
+				&:hover,&.active
+					background: #fff
+					color: #c52826
+					+tr(0.3)
+	.panel-list
+		position: relative
+	.tab-container
+		color: #fff
+		border: 0
+		clip: rect(0 0 0 0)
+		height: 1px
+		margin: -1px
+		overflow: hidden
+		padding: 0
+		position: absolute
+		width: 1px
+		h3
+			font-size: 18px
+			font-weight: 500
+			margin-bottom: 18px
+		p
+			color: #c5c5c5
+			font-weight: normal
+			line-height: 22px
+		&.show
+			clip: auto
+			height: auto
+			margin: 0
+			overflow: visible
+			position: static
+			width: auto
+			display: block !important
+		.img
+			height: 350px
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+			@media (max-width: 992px)
+				margin-top: 30px

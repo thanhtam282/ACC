@@ -1,1 +1,49 @@
 .acc-about-nav
+	ul
+		display: flex
+		justify-content: space-between
+		padding: 0 3%
+		height: 100%
+		border-bottom: 1px solid #e1e1e1
+		li
+			height: 100%
+			a
+				padding: 21px 5px
+				font-size: 14px
+				font-weight: 500
+				color: #666666
+				display: block
+				height: 100%
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					height: 2px
+					width: 100%
+					background: #08478c
+					opacity: 0
+					+tr(0.3)
+			&:hover,&.active
+				a
+					color: #08478c
+					text-decoration: none
+					&:after
+						opacity: 1
+						+tr(0.3)
+		@media (max-width: 992px)
+			overflow: auto
+			&::-webkit-scrollbar
+				background: transparent
+				height: 0
+			li
+				flex: 0 0 25%
+				text-align: center
+		@media (max-width: 768px)
+			li
+				flex: 0 0 30%
+		@media (max-width: 576px)
+			li
+				flex: 0 0 35%
+				height: 78px
