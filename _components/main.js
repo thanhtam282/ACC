@@ -10,10 +10,21 @@ $(document).ready(() => {
 	});
 	objectFitImages();
 	// Lĩnh vực
-	AOS.init();
 	breadcrum.breadcrumInit();
 	// Load Ajax
 	slider.sliderInit()
+	if ($(window).width() < 992 ){
+		AOS.init({
+			disable: true
+		});
+		
+	} else {
+		
+		AOS.init({
+			duration: 1500,
+			disable: false
+		});
+	}
 });
 
 var slider = {
@@ -49,9 +60,25 @@ var slider = {
 			},
 		})
 	},
+	home_slider_1: () => {
+		let home_slider_2 = new Swiper('.acc-home-1 .swiper-container', {
+			slidesPerView: 1,
+			autoHeight: false,
+			loop: true,
+			speed: 2000,
+			effect: 'fade',
+			// autoHeight: false,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+
+		})
+	},
 	sliderInit: () => {
 		slider.product_slider_1();
 		slider.service_slider_1();
+		slider.home_slider_1();
 
 	}
 }
