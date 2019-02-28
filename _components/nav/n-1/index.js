@@ -4,6 +4,7 @@ const nav = {
 		$('.acc-nav-1 .nav-wrap nav').slideUp()
 		$('.acc-nav-1 .nav-wrap .nav-toggle').click( function() {
 			$(this).parents('.nav-wrap').siblings().find('nav').slideUp()
+			$(this).parents('.nav-wrap').siblings().find('.nav-toggle').removeClass('active')
 			$(this).toggleClass('active')
 			$(this).siblings('nav').slideToggle()
 		})

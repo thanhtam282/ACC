@@ -1,0 +1,163 @@
+.acc-contact-2
+	@media  (min-width: 992px)
+		padding-bottom: r(70px)
+
+	.intro
+		padding-bottom: 30px
+		h2
+			// +h-title(main)
+			color: color-get($mau,main)
+
+	.container
+		background: #f1f5f6
+		padding: 60px 40px
+	.wrap-form
+		display: flex
+		flex-direction: column
+		@media  (max-width: 992px)
+			margin: 0 -15px
+		> div[id]
+			flex: 0 0 100%
+			display: flex
+			flex-wrap: wrap
+			@media  (min-width: 992px)
+				margin: 0 -15px
+			.form-group
+				width: 100%
+				padding: 0 15px
+				margin-top: 1rem
+				flex: 0 0 100%
+				position: relative
+				@media  (min-width: 455px)
+					flex: 0 0 50%
+				@media  (min-width: 992px)
+					margin-top: 0
+					margin-bottom: 1rem
+				label
+					padding-left: .8rem
+					color: color-get($mau,text-6)
+				input, textarea
+					padding: .6rem 1rem
+					transition: .3s all ease-in-out
+					font-size: r(15px)
+					width: 100%
+					height: 40px
+					border-radius: 20px
+					border: 0
+					color: color-get($mau,text-3)
+					&:hover, &:active, &:focus
+						outline: none
+						border: 1px solid color-get($mau,main)
+				span
+					position: absolute
+					bottom: -1rem
+					font-size: 14px
+					right: 14px
+					color: color-get($mau,extra)
+				textarea
+					height: 100%
+					border-radius: 10px
+
+						
+				::-webkit-input-placeholder
+					// font-weight: 300
+			.qparagraph 
+				flex: 0 0 100% !important
+				height: 174px
+			.qdropdown
+				background: #ffffff
+				position: relative
+				min-width: r(220px)
+
+				select
+					color: #666666
+					height: 100%
+					border: 1px solid #d7d7d7
+					width: 100%
+					-webkit-appearance: none
+					background: #ffffff
+					padding: 8px 1rem
+					border-radius: 0
+					&:hover, &:active, &:focus
+						outline: none
+					option
+						font-size: r(14px)
+						color: color-get($mau,text-3)
+				&:after
+					pointer-events: none
+					right: 10px
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					// right: 20px
+					width: 40px
+					height: 100%
+					border-left: 1px solid #c5c5c5
+					+faws('\f0dd', $fab, 300)
+					line-height: 36px
+					text-align: center
+					color: #c5c5c5
+		.frm-captcha
+			display: flex
+			flex-direction: column
+			flex-direction: row-reverse
+			flex: 0 0 100%
+			margin: 0 !important
+			padding-top: r(25px)
+			flex-wrap: nowrap !important
+			@media  (min-width: $sm)
+				padding-top: r(45px)
+				padding-right: 1rem
+				flex: 0 0 80% !important
+
+
+
+
+		.frm-btnwrap
+			// flex: 0 0 20%
+			width: 100%
+			padding: 0 15px
+			margin-top: 44px
+			@media  (min-width: 992px)
+				padding: 0
+				padding-top: 8px
+			label
+				display: none
+				margin: 0
+			.frm-btn
+				width: 140px
+				height: 44px
+				position: relative
+
+				&:before
+					+mtrl('\f142')
+					font-size: 1.5rem
+					right: .8rem
+					top: 50%
+					color: color-get($mau,extra)
+					transform: translateY(-50%)
+					position: absolute
+				.frm-btn-submit
+					border: 1px solid color-get($mau,extra)
+					// min-width: 180px
+					border-radius: 22px
+					width: 100%
+					height: 100%
+					font-size: r(15px)
+					+f-center
+					color: color-get($mau,extra)
+					background: none
+					transition: .3s all ease-in-out
+					cursor: pointer
+					@media  (max-width: $sm)
+						min-width: none
+
+						width: 100%
+					&:hover, &:active, &:focus
+						outline: none
+						@media  (min-width: 992px)
+							color: color-get($mau,trang)
+							background: color-get($mau, extra)
+
+				.frm-btn-reset
+					display: none
