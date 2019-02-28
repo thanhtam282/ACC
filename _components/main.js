@@ -1,8 +1,13 @@
 // viết script, gọi function ở đây
 $(document).ready(() => {
 	header.headerInit();
-	btnRipple('btn-ripple');
 	nav.navInit();
+	$(".photo-gallery").lightGallery({
+		mode: 'lg-scale-up'
+	});
+	$(".acc-video-1 .video-wrapper").lightGallery({
+		mode: 'lg-scale-up'
+	});
 	objectFitImages();
 	// Lĩnh vực
 	AOS.init();
