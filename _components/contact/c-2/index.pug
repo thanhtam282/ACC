@@ -1,0 +1,45 @@
+section.acc-contact-2
+	.container
+		.intro
+			h2 We’re here to help
+
+		.row
+			.col
+				.wrap-form
+					#id
+						.form-group.qtext
+							label.label Your Name
+							input( type="text")
+						.form-group.qtext
+							label.label Email
+							input( type="text")
+						.form-group.qtext
+							label.label Phone Number
+							input( type="text")
+						.form-group.qtext
+							label.label Address
+							input( type="text")
+						.form-group.qparagraph 
+							label.label Message
+							textarea(name="Nội dung")
+					//- .frm-captcha
+					//- 	.frm-captcha-input
+					//- 		label.label
+					//- 			| Nhập mã hiển thị
+					//- 		input( maxlength="5" placeholder="Nhập mã hiển thị")
+					//- 	.RadCaptcha(style="width:50%;")
+					//- 		span(style="visibility:hidden;") Mã không đúng.
+					//- 		#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
+					//- 			#ctl00_mainContent_ctl04_captcha_ctl01
+					//- 				img(alt=""  style="height:50px;width:180px;display:block;")
+					//- 				a.rcRefreshImage(title="Hình ảnh mới" href="#" style="display:block;") Hình ảnh mới
+					//- 		input( type="hidden")
+					//- #ctl00_mainContent_ctl04_up1(style="display:none;")
+					//- 	img(src="/Data/SiteImages/indicators/indicator1.gif" alt=" ")
+					.frm-btnwrap
+						label.label  
+						.frm-btn
+							input.frm-btn-submit(type="submit" name="ctl00$mainContent$ctl04$btnSubmit" value="View more" )
+							input.frm-btn-reset(name="ctl00$mainContent$ctl04$btnReset" type="reset" value="Xóa")
+							input#ctl00_mainContent_ctl04_hdnResponseSetGuid(type="hidden" name="ctl00$mainContent$ctl04$hdnResponseSetGuid")
+					.clear
