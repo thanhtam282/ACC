@@ -6,6 +6,7 @@
 	height: 100px
 	background-color: #ffffff
 	z-index: 200
+	box-shadow: 0 -4px 20px 0px #0000008f
 	.wrapper
 		display: flex
 		.logo
@@ -151,7 +152,8 @@
 							display: block
 							width: 2rem
 							background: color-get($mau, text-3)
-							height: 3px
+							height: 4px
+							border-radius: 2px
 							transition: .3s all ease-in-out
 							&:first-child
 								width: 1.4rem
@@ -162,11 +164,16 @@
 							span
 								margin: 0
 								&:nth-child(2)
-									display: none
+									// display: none
+									transform: translateX(1000%)
 								&:first-child
+									top: 27px
 									width: 2rem
+									position: absolute
 									transform: rotate(-45deg) !important
+									margin-bottom: 0 !important
 								&:nth-child(odd)
+									margin-bottom: 14px
 									transform: rotate(45deg)
 				.bottom-nav
 					position: fixed
@@ -180,6 +187,7 @@
 						flex-direction: column
 						margin-left: initial
 						width: 100%
+						border: 0
 						.nav-item
 							transform: translateX(-100%)
 							transition: .7s all ease-in-out
@@ -213,8 +221,17 @@
 									transition-delay: .6s
 								&:nth-child(9)
 									transition-delay: .65s
-
-							
+		.backdrop
+			width: calc(100% - 300px)
+			background: rgba(255,255,255,0.5)
+			height: 100%
+			top: 50px
+			position: fixed
+			right: 0
+			transition: .7s all ease-in-out
+			transform: translateX(100%)
+			&.active
+				transform: translateX(0%)
 	@media (max-width: 490px)
 		.wrapper
 			.nav-wrapper

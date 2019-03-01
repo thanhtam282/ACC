@@ -133,39 +133,41 @@ var slider = {
 			autoHeight: false,
 			loop: true,
 			spaceBetween: 30,
-			home_slider_1: () => {
-				let home_slider_2 = new Swiper('.acc-home-1 .swiper-container', {
-					slidesPerView: 1,
-					autoHeight: false,
-					loop: true,
-					speed: 2000,
-					effect: 'fade',
-					// autoHeight: false,
-					autoplay: {
-						delay: 5000,
-						disableOnInteraction: false,
-					},
-					navigation: {
-						nextEl: '.acc-about-5 .swiper-next',
-						prevEl: '.acc-about-5 .swiper-prev'
-					},
-					breakpoints: {
-						992: {
-							slidesPerView: 4
-						},
-						768: {
-							slidesPerView: 3
-						},
-						450: {
-							slidesPerView: 2
-						},
-						375: {
-							slidesPerView: 1
-						}
-					}
-
-				})
+			navigation: {
+				nextEl: '.acc-about-5 .swiper-next',
+				prevEl: '.acc-about-5 .swiper-prev'
 			},
+			breakpoints: {
+				992: {
+					slidesPerView: 4
+				},
+				768: {
+					slidesPerView: 3
+				},
+				450: {
+					slidesPerView: 2
+				},
+				375: {
+					slidesPerView: 1
+				}
+			}
+		})
+
+	},
+	home_slider_1: () => {
+		let home_slider_2 = new Swiper('.acc-home-1 .swiper-container', {
+			slidesPerView: 1,
+			autoHeight: false,
+			loop: true,
+			speed: 2000,
+			effect: 'fade',
+			// autoHeight: false,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+
+
 			sliderInit: () => {
 				slider.product_slider_1();
 				slider.service_slider_1();
@@ -179,6 +181,8 @@ var slider = {
 		slider.product_slider_1();
 		slider.service_slider_1();
 		slider.relationship_slider_1();
+		slider.home_slider_1();
+
 	}
 }
 

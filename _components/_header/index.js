@@ -6,7 +6,13 @@ const header = {
 		})
 	}, 
 	menuToggle: () => {
-		$('.acc-header .toggle-menu').on('click', function(){
+		$('.acc-header .toggle-menu ').on('click', function(){
+			$('.acc-header .bottom-nav').toggleClass('active')
+			$(this).toggleClass('active')
+			$('.acc-header .backdrop').toggleClass('active')
+			
+		})
+		$('.acc-header .backdrop').on('click', function(){
 			$('.acc-header .bottom-nav').toggleClass('active')
 			$(this).toggleClass('active')
 			
