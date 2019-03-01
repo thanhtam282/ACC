@@ -8,7 +8,9 @@ $(document).ready(() => {
 	$(".acc-video-1 .video-wrapper").lightGallery({
 		mode: 'lg-scale-up'
 	});
-
+	$(document).ready(function () {
+		
+	});
 
 	var yearArr = []
 	$('[data-year]').each(function () {
